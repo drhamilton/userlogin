@@ -1,0 +1,60 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello!</title>
+    <link rel="stylesheet" href="/dist/css/base.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/dashboard">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="form--container">
+        <div class="button--container">
+            <button class="active" data-form="login" >Login</button>
+            <button data-form="register" >Register</button>
+        </div>
+        <form class="active" id="login" method="POST" action="/login">
+            <label>
+                Username
+                <input autocomplete="on" name="username" type="text">
+            </label>
+            <label>
+                Password
+                <input autocomplete="on" name="password" type="password">
+            </label>
+            <input class="submit" value="Log In" type="submit">
+            <p class="form--message"></p>
+        </form>
+        <form id="register" method="POST" action="/register">
+            <label>
+                Name
+                <input autocomplete="on" name="name" type="text">
+            </label>
+            <label>
+                Email
+                <input autocomplete="on" name="email" type="email">
+            </label>
+            <label>
+                Username
+                <input name="username" minlength="5" maxlength="20" type="text">
+            </label>
+            <label>
+                Password
+                <input minlength="5" maxlength="20" name="password" type="password">
+            </label>
+            <input class="submit" value="Sign Up" type="submit">
+            <p class="form--message"></p>
+        </form>
+    </section>
+    <footer></footer>
+    <script src="dist/js/all.min.js"></script>
+</body>
+</html>
